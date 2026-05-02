@@ -1,78 +1,85 @@
 # PowerShell (powershell)
-PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework.
+PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework. The PowerShell ecosystem exposes APIs through the PowerShell Gallery (an OData-based package repository), the Runspace .NET hosting APIs, and PowerShell Remoting protocols (WS-Management and SSH).
 
-**URL:** [Visit APIs.json URL](https://github.com/PowerShell/PowerShell/apis.json)
+**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/powershell/refs/heads/main/apis.yml)
+
+## Scope
+
+- **Type:** Index
+- **Position:** Consuming
+- **Access:** 3rd-Party
 
 ## Tags:
 
- - automation, scripting, shell, command-line, windows, cross-platform
+ - Automation, Command-Line, Cross-Platform, Scripting, Shell, Windows, DevOps
 
 ## Timestamps
 
-- **Created:** 2024-01-15 00:00:00+00:00 
-- **Modified:** 2024-01-15 00:00:00+00:00 
+- **Created:** 2024-01-15
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### PowerShell Gallery API
-The PowerShell Gallery is the central repository for PowerShell modules, scripts, and DSC resources.
+The PowerShell Gallery is the central repository for PowerShell modules, scripts, and DSC resources. It exposes a public OData v2 API for searching, retrieving, and downloading packages programmatically.
 
 **Human URL:** [https://www.powershellgallery.com/](https://www.powershellgallery.com/)
 
+**Base URL:** `https://www.powershellgallery.com/api/v2`
 
 #### Tags:
 
- - modules, packages, repository, nuget
+ - Modules, NuGet, Packages, Repository, OData
 
 #### Properties
 
-- [documentation](https://docs.microsoft.com/en-us/powershell/gallery/overview)
-- [openapi](https://www.powershellgallery.com/api/v2/$metadata)
-- [swagger](https://www.powershellgallery.com/api/v2/swagger.json)
+- [Documentation](https://docs.microsoft.com/en-us/powershell/gallery/overview)
+- [Metadata](https://www.powershellgallery.com/api/v2/$metadata)
 
 ### PowerShell Runspace API
-APIs for creating and managing PowerShell runspaces programmatically from .NET applications.
+.NET APIs for creating, configuring, and managing PowerShell runspaces from host applications. Enables embedding PowerShell execution inside .NET programs.
 
 **Human URL:** [https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.runspaces](https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.runspaces)
 
 
 #### Tags:
 
- - runspace, dotnet, automation, sdk
+ - Automation, .NET, Runspace, SDK
 
 #### Properties
 
-- [documentation](https://docs.microsoft.com/en-us/powershell/scripting/developer/hosting/creating-runspaces)
-- [sdk](https://www.nuget.org/packages/System.Management.Automation/)
-- [examples](https://github.com/PowerShell/PowerShell/tree/master/test/hosting)
+- [Documentation](https://docs.microsoft.com/en-us/powershell/scripting/developer/hosting/creating-runspaces)
+- [SDK](https://www.nuget.org/packages/System.Management.Automation/)
+- [Examples](https://github.com/PowerShell/PowerShell/tree/master/test/hosting)
 
 ### PowerShell Remoting API
-APIs for remote PowerShell execution using WS-Management and SSH protocols.
+APIs and protocols for remote PowerShell execution over WS-Management (WinRM) and SSH. Enables one-to-one and one-to-many remote command and session management.
 
 **Human URL:** [https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/running-remote-commands](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/running-remote-commands)
 
 
 #### Tags:
 
- - remoting, ssh, ws-management, winrm
+ - Remoting, SSH, WinRM, WS-Management
 
 #### Properties
 
-- [documentation](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/powershell-remoting-faq)
-- [protocol-specification](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-psrp/)
+- [Documentation](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/powershell-remoting-faq)
+- [ProtocolSpecification](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-psrp/)
 
 ## Common Properties
 
-- [github-repository](https://github.com/PowerShell/PowerShell)
-- [documentation](https://docs.microsoft.com/en-us/powershell/)
-- [blog](https://devblogs.microsoft.com/powershell/)
-- [community](https://github.com/PowerShell/PowerShell/blob/master/docs/community/README.md)
-- [getting-started](https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started)
-- [license](https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt)
-- [releases](https://github.com/PowerShell/PowerShell/releases)
-- [roadmap](https://github.com/PowerShell/PowerShell/projects)
-- [security](https://github.com/PowerShell/PowerShell/security/policy)
-- [contributing](https://github.com/PowerShell/PowerShell/blob/master/.github/CONTRIBUTING.md)
+- [Website](https://microsoft.com/powershell)
+- [GitHub](https://github.com/PowerShell/PowerShell)
+- [Documentation](https://docs.microsoft.com/en-us/powershell/)
+- [Blog](https://devblogs.microsoft.com/powershell/)
+- [Community](https://github.com/PowerShell/PowerShell/blob/master/docs/community/README.md)
+- [GettingStarted](https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started)
+- [License](https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt)
+- [Releases](https://github.com/PowerShell/PowerShell/releases)
+- [Roadmap](https://github.com/PowerShell/PowerShell/projects)
+- [Security](https://github.com/PowerShell/PowerShell/security/policy)
+- [Contributing](https://github.com/PowerShell/PowerShell/blob/master/.github/CONTRIBUTING.md)
 
 ## Maintainers
 

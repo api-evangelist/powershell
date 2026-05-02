@@ -1,5 +1,13 @@
+aid: powershell
 name: PowerShell
-description: PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework.
+description: >-
+  PowerShell is a cross-platform task automation solution made up of a
+  command-line shell, a scripting language, and a configuration
+  management framework. The PowerShell ecosystem exposes APIs through
+  the PowerShell Gallery (an OData-based package repository), the
+  Runspace .NET hosting APIs, and PowerShell Remoting protocols
+  (WS-Management and SSH).
+type: Index
 image: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg
 tags:
   - Automation
@@ -8,85 +16,97 @@ tags:
   - Scripting
   - Shell
   - Windows
-created: 2024-01-15 00:00:00+00:00
-modified: 2024-01-15 00:00:00+00:00
-url: https://github.com/PowerShell/PowerShell/apis.json
+  - DevOps
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/powershell/refs/heads/main/apis.yml
+created: '2024-01-15'
+modified: '2026-04-28'
+specificationVersion: '0.19'
 apis:
-  - name: PowerShell Gallery API
-    description: The PowerShell Gallery is the central repository for PowerShell modules, scripts, and DSC resources.
+  - aid: powershell:powershell-gallery-api
+    name: PowerShell Gallery API
+    description: >-
+      The PowerShell Gallery is the central repository for PowerShell
+      modules, scripts, and DSC resources. It exposes a public OData v2
+      API for searching, retrieving, and downloading packages
+      programmatically.
     image: https://www.powershellgallery.com/Content/Images/Branding/psgallerylogo.svg
     humanURL: https://www.powershellgallery.com/
     baseURL: https://www.powershellgallery.com/api/v2
     tags:
       - Modules
-      - Nuget
+      - NuGet
       - Packages
       - Repository
+      - OData
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://docs.microsoft.com/en-us/powershell/gallery/overview
-      - type: openapi
+      - type: Metadata
         url: https://www.powershellgallery.com/api/v2/$metadata
-      - type: swagger
-        url: https://www.powershellgallery.com/api/v2/swagger.json
     contact:
-      - type: support
+      - FN: PowerShell Gallery Support
         url: https://github.com/PowerShell/PowerShellGallery/issues
-  - name: PowerShell Runspace API
-    description: APIs for creating and managing PowerShell runspaces programmatically from .NET applications.
+  - aid: powershell:powershell-runspace-api
+    name: PowerShell Runspace API
+    description: >-
+      .NET APIs for creating, configuring, and managing PowerShell
+      runspaces from host applications. Enables embedding PowerShell
+      execution inside .NET programs.
     humanURL: https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.runspaces
     tags:
       - Automation
-      - Dotnet
+      - .NET
       - Runspace
-      - Sdk
+      - SDK
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://docs.microsoft.com/en-us/powershell/scripting/developer/hosting/creating-runspaces
-      - type: sdk
+      - type: SDK
         url: https://www.nuget.org/packages/System.Management.Automation/
-      - type: examples
+      - type: Examples
         url: https://github.com/PowerShell/PowerShell/tree/master/test/hosting
-  - name: PowerShell Remoting API
-    description: APIs for remote PowerShell execution using WS-Management and SSH protocols.
+  - aid: powershell:powershell-remoting-api
+    name: PowerShell Remoting API
+    description: >-
+      APIs and protocols for remote PowerShell execution over
+      WS-Management (WinRM) and SSH. Enables one-to-one and one-to-many
+      remote command and session management.
     humanURL: https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/running-remote-commands
     tags:
       - Remoting
-      - Ssh
-      - Winrm
-      - Ws-Management
+      - SSH
+      - WinRM
+      - WS-Management
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/powershell-remoting-faq
-      - type: protocol-specification
+      - type: ProtocolSpecification
         url: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-psrp/
+common:
+  - type: Website
+    url: https://microsoft.com/powershell
+  - type: GitHub
+    url: https://github.com/PowerShell/PowerShell
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/powershell/
+  - type: Blog
+    url: https://devblogs.microsoft.com/powershell/
+  - type: Community
+    url: https://github.com/PowerShell/PowerShell/blob/master/docs/community/README.md
+  - type: GettingStarted
+    url: https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started
+  - type: License
+    url: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
+  - type: Releases
+    url: https://github.com/PowerShell/PowerShell/releases
+  - type: Roadmap
+    url: https://github.com/PowerShell/PowerShell/projects
+  - type: Security
+    url: https://github.com/PowerShell/PowerShell/security/policy
+  - type: Contributing
+    url: https://github.com/PowerShell/PowerShell/blob/master/.github/CONTRIBUTING.md
 maintainers:
-  - name: Microsoft
+  - FN: Microsoft
     email: powershell@microsoft.com
     url: https://github.com/PowerShell
-common:
-  - type: github-repository
-    url: https://github.com/PowerShell/PowerShell
-  - type: documentation
-    url: https://docs.microsoft.com/en-us/powershell/
-  - type: blog
-    url: https://devblogs.microsoft.com/powershell/
-  - type: community
-    url: https://github.com/PowerShell/PowerShell/blob/master/docs/community/README.md
-  - type: getting-started
-    url: https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started
-  - type: license
-    url: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
-  - type: releases
-    url: https://github.com/PowerShell/PowerShell/releases
-  - type: roadmap
-    url: https://github.com/PowerShell/PowerShell/projects
-  - type: security
-    url: https://github.com/PowerShell/PowerShell/security/policy
-  - type: contributing
-    url: https://github.com/PowerShell/PowerShell/blob/master/.github/CONTRIBUTING.md
-include:
-  - name: Azure PowerShell APIs
-    url: https://github.com/Azure/azure-powershell/apis.json
-  - name: Windows PowerShell Management APIs
-    url: https://docs.microsoft.com/en-us/windows/apis.json
