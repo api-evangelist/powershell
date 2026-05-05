@@ -1,0 +1,13 @@
+{
+  "repo": "powershell",
+  "feeds": [
+    {
+      "source": "https://devblogs.microsoft.com/powershell/",
+      "feed_url": "https://devblogs.microsoft.com/powershell/feed/",
+      "saved": 10,
+      "title": "PowerShell Team"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:34:12Z"
+}
