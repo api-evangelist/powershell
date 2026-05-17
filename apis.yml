@@ -100,7 +100,7 @@ common:
     url: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
   - type: Releases
     url: https://github.com/PowerShell/PowerShell/releases
-  - type: Roadmap
+  - type: RoadMap
     url: https://github.com/PowerShell/PowerShell/projects
   - type: Security
     url: https://github.com/PowerShell/PowerShell/security/policy
