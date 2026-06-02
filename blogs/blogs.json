@@ -2,12 +2,17 @@
   "repo": "powershell",
   "feeds": [
     {
-      "source": "https://devblogs.microsoft.com/powershell/",
+      "source": "https://devblogs.microsoft.com/powershell/feed/",
       "feed_url": "https://devblogs.microsoft.com/powershell/feed/",
-      "title": "PowerShell Team",
-      "saved": 5
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://docs.microsoft.com/en-us/powershell/",
+      "error": "HTTPError"
     }
   ],
-  "post_count": 15,
-  "fetched": "2026-05-17T20:20:35Z"
+  "post_count": 17,
+  "fetched": "2026-06-01T23:35:02Z"
 }
