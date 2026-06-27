@@ -62,7 +62,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/en-us/powershell/scripting/developer/hosting/creating-runspaces
-      - type: SDK
+      - type: SDKs
         url: https://www.nuget.org/packages/System.Management.Automation/
       - type: Examples
         url: https://github.com/PowerShell/PowerShell/tree/master/test/hosting
@@ -98,7 +98,7 @@ common:
     url: https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started
   - type: License
     url: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
-  - type: Releases
+  - type: ReleaseNotes
     url: https://github.com/PowerShell/PowerShell/releases
   - type: RoadMap
     url: https://github.com/PowerShell/PowerShell/projects
