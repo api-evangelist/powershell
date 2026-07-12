@@ -84,6 +84,14 @@ apis:
       - type: ProtocolSpecification
         url: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-psrp/
 common:
+  - type: TrustCenter
+    url: security/powershell-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/powershell-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/powershell-domain-security.yml
+  - type: Authentication
+    url: authentication/powershell-authentication.yml
   - type: Website
     url: https://microsoft.com/powershell
   - type: GitHub

@@ -1,0 +1,37 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: microsoft.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 20 09:04:17 2026 GMT
+  hsts: false
+- host: www.powershellgallery.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 13 23:59:59 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: docs.microsoft.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 10 06:59:10 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: microsoft.com
+  dnssec: false
+  caa:
+  - 0 contactemail "caarecordaware@microsoft.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+- domain: powershellgallery.com
+  dnssec: false
+  caa:
+  - 0 iodef "mailto:caarecordaware@microsoft.com"
+  - 0 contactemail "caarecordaware@microsoft.com"
+  spf: false
+  dmarc: true
+  dmarc_policy: reject

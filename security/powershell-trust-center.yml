@@ -1,0 +1,12 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://www.microsoft.com/en-us/trust-center
+url: https://www.microsoft.com/en-us/trust-center
+certifications:
+- GDPR
+evidence:
+- source: https://www.microsoft.com/en-us/trust-center
+  keywords:
+  - trust center
+  - gdpr

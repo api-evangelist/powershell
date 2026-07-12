@@ -1,0 +1,18 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/powershell-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: galleryApiKey
+  type: apiKey
+  in: header
+  parameter: X-NuGet-ApiKey
+  description: |-
+    PowerShell Gallery publishing API key, issued from a signed-in PowerShell
+    Gallery user account. Required for package push and unlist operations.
+  sources:
+  - openapi/powershell-openapi.yml
