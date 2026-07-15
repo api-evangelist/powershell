@@ -84,6 +84,8 @@ apis:
       - type: ProtocolSpecification
         url: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-psrp/
 common:
+  - type: AgenticAccess
+    url: agentic-access/powershell-agentic-access.yml
   - type: TrustCenter
     url: security/powershell-trust-center.yml
   - type: VulnerabilityDisclosure
