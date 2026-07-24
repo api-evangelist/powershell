@@ -1,0 +1,52 @@
+openapi: 3.1.0
+info:
+  title: PowerShell Gallery Metadata API
+  description: 'The PowerShell Gallery exposes a public OData v2 API for discovering, retrieving,
+
+    and downloading PowerShell modules, scripts, and DSC resources. The service is
+
+    consumed by the PowerShellGet / Microsoft.PowerShell.PSResourceGet client modules,
+
+    but can also be queried directly via HTTP. Publishing endpoints require a Gallery
+
+    API key passed in the X-NuGet-ApiKey header.
+
+    '
+  version: '2.0'
+  contact:
+    name: PowerShell Gallery
+    url: https://www.powershellgallery.com/
+  license:
+    name: PowerShell Gallery Terms of Use
+    url: https://www.powershellgallery.com/policies/Terms
+servers:
+- url: https://www.powershellgallery.com/api/v2
+  description: PowerShell Gallery OData v2 endpoint
+security: []
+tags:
+- name: Metadata
+  description: OData service metadata.
+paths:
+  /$metadata:
+    get:
+      tags:
+      - Metadata
+      summary: Retrieve OData service metadata
+      description: Returns the EDM CSDL describing entity sets, types, and function imports exposed by the Gallery.
+      operationId: getMetadata
+      responses:
+        '200':
+          description: OData CSDL document.
+          content:
+            application/xml: {}
+components:
+  securitySchemes:
+    galleryApiKey:
+      type: apiKey
+      in: header
+      name: X-NuGet-ApiKey
+      description: 'PowerShell Gallery publishing API key, issued from a signed-in PowerShell
+
+        Gallery user account. Required for package push and unlist operations.
+
+        '

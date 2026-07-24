@@ -1,0 +1,85 @@
+openapi: 3.1.0
+info:
+  title: PowerShell Gallery Metadata Updates API
+  description: 'The PowerShell Gallery exposes a public OData v2 API for discovering, retrieving,
+
+    and downloading PowerShell modules, scripts, and DSC resources. The service is
+
+    consumed by the PowerShellGet / Microsoft.PowerShell.PSResourceGet client modules,
+
+    but can also be queried directly via HTTP. Publishing endpoints require a Gallery
+
+    API key passed in the X-NuGet-ApiKey header.
+
+    '
+  version: '2.0'
+  contact:
+    name: PowerShell Gallery
+    url: https://www.powershellgallery.com/
+  license:
+    name: PowerShell Gallery Terms of Use
+    url: https://www.powershellgallery.com/policies/Terms
+servers:
+- url: https://www.powershellgallery.com/api/v2
+  description: PowerShell Gallery OData v2 endpoint
+security: []
+tags:
+- name: Updates
+  description: Find updates for installed packages.
+paths:
+  /GetUpdates():
+    get:
+      tags:
+      - Updates
+      summary: Check for package updates
+      description: OData function import that returns available updates for a supplied set of installed packages.
+      operationId: getUpdates
+      parameters:
+      - name: packageIds
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Pipe-delimited, quoted list of package ids.
+      - name: versions
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Pipe-delimited, quoted list of currently installed versions.
+      - name: includePrerelease
+        in: query
+        schema:
+          type: boolean
+          default: false
+      - name: includeAllVersions
+        in: query
+        schema:
+          type: boolean
+          default: false
+      - name: targetFrameworks
+        in: query
+        schema:
+          type: string
+      - name: versionConstraints
+        in: query
+        schema:
+          type: string
+      - name: semVerLevel
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Feed of update candidates.
+components:
+  securitySchemes:
+    galleryApiKey:
+      type: apiKey
+      in: header
+      name: X-NuGet-ApiKey
+      description: 'PowerShell Gallery publishing API key, issued from a signed-in PowerShell
+
+        Gallery user account. Required for package push and unlist operations.
+
+        '

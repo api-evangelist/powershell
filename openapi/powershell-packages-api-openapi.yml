@@ -1,0 +1,145 @@
+openapi: 3.1.0
+info:
+  title: PowerShell Gallery Metadata Packages API
+  description: 'The PowerShell Gallery exposes a public OData v2 API for discovering, retrieving,
+
+    and downloading PowerShell modules, scripts, and DSC resources. The service is
+
+    consumed by the PowerShellGet / Microsoft.PowerShell.PSResourceGet client modules,
+
+    but can also be queried directly via HTTP. Publishing endpoints require a Gallery
+
+    API key passed in the X-NuGet-ApiKey header.
+
+    '
+  version: '2.0'
+  contact:
+    name: PowerShell Gallery
+    url: https://www.powershellgallery.com/
+  license:
+    name: PowerShell Gallery Terms of Use
+    url: https://www.powershellgallery.com/policies/Terms
+servers:
+- url: https://www.powershellgallery.com/api/v2
+  description: PowerShell Gallery OData v2 endpoint
+security: []
+tags:
+- name: Packages
+  description: Browse and retrieve package entries from the Gallery feed.
+paths:
+  /Packages:
+    get:
+      tags:
+      - Packages
+      summary: List packages
+      description: 'Returns the V2FeedPackage entity set. Supports standard OData query options
+
+        such as $filter, $orderby, $top, $skip, $select, $expand.
+
+        '
+      operationId: listPackages
+      parameters:
+      - $ref: '#/components/parameters/Filter'
+      - $ref: '#/components/parameters/OrderBy'
+      - $ref: '#/components/parameters/Top'
+      - $ref: '#/components/parameters/Skip'
+      - $ref: '#/components/parameters/Select'
+      - $ref: '#/components/parameters/SemVerLevel'
+      responses:
+        '200':
+          description: OData feed of packages.
+          content:
+            application/atom+xml: {}
+            application/json: {}
+  /Packages(Id='{id}',Version='{version}'):
+    get:
+      tags:
+      - Packages
+      summary: Get a package by Id and Version
+      description: Retrieves a single V2FeedPackage entity by its primary key (Id, Version).
+      operationId: getPackage
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Package entity.
+          content:
+            application/atom+xml: {}
+            application/json: {}
+        '404':
+          description: Package not found.
+  /FindPackagesById():
+    get:
+      tags:
+      - Packages
+      summary: Find all versions of a package by Id
+      description: OData function import returning every published version of the supplied package Id.
+      operationId: findPackagesById
+      parameters:
+      - name: id
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Quoted package id, e.g. 'PSReadLine'.
+      - name: semVerLevel
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Feed of package versions.
+components:
+  parameters:
+    SemVerLevel:
+      name: semVerLevel
+      in: query
+      schema:
+        type: string
+    Select:
+      name: $select
+      in: query
+      schema:
+        type: string
+    OrderBy:
+      name: $orderby
+      in: query
+      schema:
+        type: string
+    Skip:
+      name: $skip
+      in: query
+      schema:
+        type: integer
+        minimum: 0
+    Filter:
+      name: $filter
+      in: query
+      schema:
+        type: string
+      description: OData $filter expression.
+    Top:
+      name: $top
+      in: query
+      schema:
+        type: integer
+        minimum: 0
+  securitySchemes:
+    galleryApiKey:
+      type: apiKey
+      in: header
+      name: X-NuGet-ApiKey
+      description: 'PowerShell Gallery publishing API key, issued from a signed-in PowerShell
+
+        Gallery user account. Required for package push and unlist operations.
+
+        '

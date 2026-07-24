@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: PowerShell Gallery Metadata Search API
+  description: 'The PowerShell Gallery exposes a public OData v2 API for discovering, retrieving,
+
+    and downloading PowerShell modules, scripts, and DSC resources. The service is
+
+    consumed by the PowerShellGet / Microsoft.PowerShell.PSResourceGet client modules,
+
+    but can also be queried directly via HTTP. Publishing endpoints require a Gallery
+
+    API key passed in the X-NuGet-ApiKey header.
+
+    '
+  version: '2.0'
+  contact:
+    name: PowerShell Gallery
+    url: https://www.powershellgallery.com/
+  license:
+    name: PowerShell Gallery Terms of Use
+    url: https://www.powershellgallery.com/policies/Terms
+servers:
+- url: https://www.powershellgallery.com/api/v2
+  description: PowerShell Gallery OData v2 endpoint
+security: []
+tags:
+- name: Search
+  description: Search and discovery operations.
+paths:
+  /Search():
+    get:
+      tags:
+      - Search
+      summary: Search packages
+      description: 'OData function import that searches the Gallery feed using a free-text search
+
+        term, with optional target framework, prerelease, and SemVer level filters.
+
+        '
+      operationId: searchPackages
+      parameters:
+      - name: searchTerm
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Quoted search expression, e.g. 'Az'.
+      - name: targetFramework
+        in: query
+        schema:
+          type: string
+        description: Quoted target framework moniker.
+      - name: includePrerelease
+        in: query
+        schema:
+          type: boolean
+          default: false
+      - name: semVerLevel
+        in: query
+        schema:
+          type: string
+          example: 2.0.0
+      - $ref: '#/components/parameters/Top'
+      - $ref: '#/components/parameters/Skip'
+      - $ref: '#/components/parameters/OrderBy'
+      responses:
+        '200':
+          description: Search results feed.
+          content:
+            application/atom+xml: {}
+            application/json: {}
+components:
+  parameters:
+    Skip:
+      name: $skip
+      in: query
+      schema:
+        type: integer
+        minimum: 0
+    Top:
+      name: $top
+      in: query
+      schema:
+        type: integer
+        minimum: 0
+    OrderBy:
+      name: $orderby
+      in: query
+      schema:
+        type: string
+  securitySchemes:
+    galleryApiKey:
+      type: apiKey
+      in: header
+      name: X-NuGet-ApiKey
+      description: 'PowerShell Gallery publishing API key, issued from a signed-in PowerShell
+
+        Gallery user account. Required for package push and unlist operations.
+
+        '
