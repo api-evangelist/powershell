@@ -1,0 +1,20 @@
+{
+  "provider": "powershell",
+  "sources": [
+    "powershell-metadata-api-openapi.yml",
+    "powershell-packages-api-openapi.yml",
+    "powershell-search-api-openapi.yml",
+    "powershell-updates-api-openapi.yml"
+  ],
+  "outputs": [
+    "powershell-metadata-api-openapi.yml",
+    "powershell-packages-api-openapi.yml",
+    "powershell-search-api-openapi.yml",
+    "powershell-updates-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
