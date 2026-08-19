@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PowerShell Gallery Metadata Search API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search packages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.powershellgallery.com/api/v2/Search()",
+            "params": [
+              {
+                "name": "searchTerm",
+                "value": "",
+                "type": "query",
+                "description": "Quoted search expression, e.g. 'Az'."
+              },
+              {
+                "name": "targetFramework",
+                "value": "",
+                "type": "query",
+                "description": "Quoted target framework moniker."
+              },
+              {
+                "name": "includePrerelease",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "semVerLevel",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$orderby",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "OData function import that searches the Gallery feed using a free-text search\nterm, with optional target framework, prerelease, and SemVer level filters.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

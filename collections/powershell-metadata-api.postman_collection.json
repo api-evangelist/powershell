@@ -1,0 +1,102 @@
+{
+  "item": [
+    {
+      "id": "56dfd427-155e-4745-80fb-21fd383c8de3",
+      "name": "Metadata",
+      "description": {
+        "content": "OData service metadata.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d8fcf438-6cfe-4c09-af38-a842485e226c",
+          "name": "Retrieve OData service metadata",
+          "request": {
+            "name": "Retrieve OData service metadata",
+            "description": {
+              "content": "Returns the EDM CSDL describing entity sets, types, and function imports exposed by the Gallery.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "$metadata"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aeeb45f4-f43a-4c7d-8664-29cced9b4681",
+              "name": "OData CSDL document.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "$metadata"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.powershellgallery.com/api/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3489bfb0-9141-4207-838d-40fa67cc58a4",
+    "name": "PowerShell Gallery Metadata API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The PowerShell Gallery exposes a public OData v2 API for discovering, retrieving,\nand downloading PowerShell modules, scripts, and DSC resources. The service is\nconsumed by the PowerShellGet / Microsoft.PowerShell.PSResourceGet client modules,\nbut can also be queried directly via HTTP. Publishing endpoints require a Gallery\nAPI key passed in the X-NuGet-ApiKey header.\n\n\nContact Support:\n Name: PowerShell Gallery",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "item": [
+    {
+      "id": "212cb30d-41e1-4548-8223-25ef57223221",
+      "name": "Search",
+      "description": {
+        "content": "Search and discovery operations.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f6a4ab53-587a-427c-99ae-afb3ef6d72c3",
+          "name": "Search packages",
+          "request": {
+            "name": "Search packages",
+            "description": {
+              "content": "OData function import that searches the Gallery feed using a free-text search\nterm, with optional target framework, prerelease, and SemVer level filters.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "Search()"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "searchTerm",
+                  "value": "<string>",
+                  "description": "(Required) Quoted search expression, e.g. 'Az'."
+                },
+                {
+                  "disabled": false,
+                  "key": "targetFramework",
+                  "value": "<string>",
+                  "description": "Quoted target framework moniker."
+                },
+                {
+                  "disabled": false,
+                  "key": "includePrerelease",
+                  "value": "false"
+                },
+                {
+                  "disabled": false,
+                  "key": "semVerLevel",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "$orderby",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/atom+xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a07ffcdf-ae01-4c96-876e-346fd3627d10",
+              "name": "Search results feed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Search()"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "searchTerm",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "targetFramework",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "includePrerelease",
+                      "value": "false"
+                    },
+                    {
+                      "key": "semVerLevel",
+                      "value": "2.0.0"
+                    },
+                    {
+                      "key": "$top",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "$orderby",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/atom+xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.powershellgallery.com/api/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "16501e94-e4d0-44f3-8c3c-df44643a0af6",
+    "name": "PowerShell Gallery Metadata Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The PowerShell Gallery exposes a public OData v2 API for discovering, retrieving,\nand downloading PowerShell modules, scripts, and DSC resources. The service is\nconsumed by the PowerShellGet / Microsoft.PowerShell.PSResourceGet client modules,\nbut can also be queried directly via HTTP. Publishing endpoints require a Gallery\nAPI key passed in the X-NuGet-ApiKey header.\n\n\nContact Support:\n Name: PowerShell Gallery",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PowerShell Gallery Metadata Packages API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Packages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List packages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.powershellgallery.com/api/v2/Packages",
+            "params": [
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "OData $filter expression."
+              },
+              {
+                "name": "$orderby",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$select",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "semVerLevel",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns the V2FeedPackage entity set. Supports standard OData query options\nsuch as $filter, $orderby, $top, $skip, $select, $expand.\n"
+        },
+        {
+          "info": {
+            "name": "Get a package by Id and Version",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.powershellgallery.com/api/v2/Packages(Id=':id',Version=':version')",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieves a single V2FeedPackage entity by its primary key (Id, Version)."
+        },
+        {
+          "info": {
+            "name": "Find all versions of a package by Id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.powershellgallery.com/api/v2/FindPackagesById()",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Quoted package id, e.g. 'PSReadLine'."
+              },
+              {
+                "name": "semVerLevel",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "OData function import returning every published version of the supplied package Id."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

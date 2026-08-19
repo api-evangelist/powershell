@@ -1,0 +1,357 @@
+{
+  "item": [
+    {
+      "id": "f2eb6eaf-43e4-4938-9d49-719277a6f7a8",
+      "name": "Packages",
+      "description": {
+        "content": "Browse and retrieve package entries from the Gallery feed.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d9c19e12-8c1a-4389-b3ad-74335f75d97d",
+          "name": "List packages",
+          "request": {
+            "name": "List packages",
+            "description": {
+              "content": "Returns the V2FeedPackage entity set. Supports standard OData query options\nsuch as $filter, $orderby, $top, $skip, $select, $expand.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "Packages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>",
+                  "description": "OData $filter expression."
+                },
+                {
+                  "disabled": false,
+                  "key": "$orderby",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "$select",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "semVerLevel",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/atom+xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d79b2ddc-8756-420f-b5ac-667ad1d70f4a",
+              "name": "OData feed of packages.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Packages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "$orderby",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "$top",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "$select",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "semVerLevel",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/atom+xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f97a23d6-da39-4175-b126-e4e7cf005f77",
+          "name": "Get a package by Id and Version",
+          "request": {
+            "name": "Get a package by Id and Version",
+            "description": {
+              "content": "Retrieves a single V2FeedPackage entity by its primary key (Id, Version).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "Packages(Id='{{id}}',Version='{{version}}')"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/atom+xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0b8d0377-ac26-4e72-b974-be22e974daee",
+              "name": "Package entity.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Packages(Id='{{id}}',Version='{{version}}')"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/atom+xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4e3a587e-2a69-4852-8536-f2c50ccc0676",
+              "name": "Package not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Packages(Id='{{id}}',Version='{{version}}')"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bb283a8e-8bcf-422b-b374-d57429d8ab26",
+          "name": "Find all versions of a package by Id",
+          "request": {
+            "name": "Find all versions of a package by Id",
+            "description": {
+              "content": "OData function import returning every published version of the supplied package Id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "FindPackagesById()"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) Quoted package id, e.g. 'PSReadLine'."
+                },
+                {
+                  "disabled": false,
+                  "key": "semVerLevel",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "68a9c701-3726-495d-b472-3497d5ee050d",
+              "name": "Feed of package versions.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "FindPackagesById()"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "semVerLevel",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.powershellgallery.com/api/v2",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "id"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "info": {
+    "_postman_id": "a760cddf-0780-4e8c-8c1b-39b16fce1d68",
+    "name": "PowerShell Gallery Metadata Packages API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The PowerShell Gallery exposes a public OData v2 API for discovering, retrieving,\nand downloading PowerShell modules, scripts, and DSC resources. The service is\nconsumed by the PowerShellGet / Microsoft.PowerShell.PSResourceGet client modules,\nbut can also be queried directly via HTTP. Publishing endpoints require a Gallery\nAPI key passed in the X-NuGet-ApiKey header.\n\n\nContact Support:\n Name: PowerShell Gallery",
+      "type": "text/plain"
+    }
+  }
+}

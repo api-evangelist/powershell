@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PowerShell Gallery Metadata Updates API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Updates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Check for package updates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.powershellgallery.com/api/v2/GetUpdates()",
+            "params": [
+              {
+                "name": "packageIds",
+                "value": "",
+                "type": "query",
+                "description": "Pipe-delimited, quoted list of package ids."
+              },
+              {
+                "name": "versions",
+                "value": "",
+                "type": "query",
+                "description": "Pipe-delimited, quoted list of currently installed versions."
+              },
+              {
+                "name": "includePrerelease",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "includeAllVersions",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "targetFrameworks",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "versionConstraints",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "semVerLevel",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "OData function import that returns available updates for a supplied set of installed packages."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

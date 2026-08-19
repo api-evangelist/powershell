@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PowerShell Gallery Metadata API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Metadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve OData service metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.powershellgallery.com/api/v2/$metadata"
+          },
+          "docs": "Returns the EDM CSDL describing entity sets, types, and function imports exposed by the Gallery."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,157 @@
+{
+  "item": [
+    {
+      "id": "4c30847d-bfdb-4fc9-807d-eb2385e4014a",
+      "name": "Updates",
+      "description": {
+        "content": "Find updates for installed packages.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "74fa1520-9281-439e-a64d-b1699b1c87a9",
+          "name": "Check for package updates",
+          "request": {
+            "name": "Check for package updates",
+            "description": {
+              "content": "OData function import that returns available updates for a supplied set of installed packages.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "GetUpdates()"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "packageIds",
+                  "value": "<string>",
+                  "description": "(Required) Pipe-delimited, quoted list of package ids."
+                },
+                {
+                  "disabled": false,
+                  "key": "versions",
+                  "value": "<string>",
+                  "description": "(Required) Pipe-delimited, quoted list of currently installed versions."
+                },
+                {
+                  "disabled": false,
+                  "key": "includePrerelease",
+                  "value": "false"
+                },
+                {
+                  "disabled": false,
+                  "key": "includeAllVersions",
+                  "value": "false"
+                },
+                {
+                  "disabled": false,
+                  "key": "targetFrameworks",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "versionConstraints",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "semVerLevel",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7a626c7c-2b72-47f6-bc11-d27d8dd425d4",
+              "name": "Feed of update candidates.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "GetUpdates()"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "packageIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "versions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "includePrerelease",
+                      "value": "false"
+                    },
+                    {
+                      "key": "includeAllVersions",
+                      "value": "false"
+                    },
+                    {
+                      "key": "targetFrameworks",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "versionConstraints",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "semVerLevel",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.powershellgallery.com/api/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3803a65e-4870-4ba3-9132-0f9a1d335610",
+    "name": "PowerShell Gallery Metadata Updates API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The PowerShell Gallery exposes a public OData v2 API for discovering, retrieving,\nand downloading PowerShell modules, scripts, and DSC resources. The service is\nconsumed by the PowerShellGet / Microsoft.PowerShell.PSResourceGet client modules,\nbut can also be queried directly via HTTP. Publishing endpoints require a Gallery\nAPI key passed in the X-NuGet-ApiKey header.\n\n\nContact Support:\n Name: PowerShell Gallery",
+      "type": "text/plain"
+    }
+  }
+}
