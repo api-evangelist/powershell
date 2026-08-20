@@ -24,6 +24,14 @@ accessModel:
 image: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg
 tags:
   - Automation
+  - Command Line
+  - Cross-Platform
+  - Scripting
+  - Shell
+  - Windows
+  - DevOps
+tags_raw:
+  - Automation
   - Command-Line
   - Cross-Platform
   - Scripting
