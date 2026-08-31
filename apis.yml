@@ -35,7 +35,7 @@ accessModel:
 image: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg
 tags:
   - Automation
-  - Command Line
+  - Command-Line
   - Cross-Platform
   - Scripting
   - Shell

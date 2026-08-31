@@ -10,9 +10,12 @@
     },
     {
       "source": "https://docs.microsoft.com/en-us/powershell/",
-      "error": "HTTPError"
+      "feed_url": "https://docs.microsoft.com/en-us/powershell/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "post_count": 17,
-  "fetched": "2026-08-22T20:20:02Z"
+  "fetched": "2026-08-30T22:33:40Z"
 }
