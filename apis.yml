@@ -204,3 +204,5 @@ maintainers:
   - FN: Microsoft
     email: powershell@microsoft.com
     url: https://github.com/PowerShell
+x-parent: microsoft
+x-relationship: product

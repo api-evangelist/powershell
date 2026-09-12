@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: PowerShell Gallery Metadata Search API
   description: 'The PowerShell Gallery exposes a public OData v2 API for discovering, retrieving,
@@ -71,14 +71,14 @@ paths:
             application/json: {}
 components:
   parameters:
-    Skip:
-      name: $skip
+    Top:
+      name: $top
       in: query
       schema:
         type: integer
         minimum: 0
-    Top:
-      name: $top
+    Skip:
+      name: $skip
       in: query
       schema:
         type: integer

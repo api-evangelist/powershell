@@ -15,6 +15,12 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
+  "notes": [
+    "powershell-metadata-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "powershell-packages-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "powershell-search-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "powershell-updates-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
   "skipped": []
 }
