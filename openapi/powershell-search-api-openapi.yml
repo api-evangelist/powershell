@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: PowerShell Gallery Metadata Search API
+  title: PowerShell Gallery Search API
   description: 'The PowerShell Gallery exposes a public OData v2 API for discovering, retrieving,
 
     and downloading PowerShell modules, scripts, and DSC resources. The service is
@@ -9,9 +9,7 @@ info:
 
     but can also be queried directly via HTTP. Publishing endpoints require a Gallery
 
-    API key passed in the X-NuGet-ApiKey header.
-
-    '
+    API key passed in the X-NuGet-ApiKey header.'
   version: '2.0'
   contact:
     name: PowerShell Gallery
@@ -34,9 +32,7 @@ paths:
       summary: Search packages
       description: 'OData function import that searches the Gallery feed using a free-text search
 
-        term, with optional target framework, prerelease, and SemVer level filters.
-
-        '
+        term, with optional target framework, prerelease, and SemVer level filters.'
       operationId: searchPackages
       parameters:
       - name: searchTerm
@@ -71,12 +67,6 @@ paths:
             application/json: {}
 components:
   parameters:
-    Top:
-      name: $top
-      in: query
-      schema:
-        type: integer
-        minimum: 0
     Skip:
       name: $skip
       in: query
@@ -88,6 +78,12 @@ components:
       in: query
       schema:
         type: string
+    Top:
+      name: $top
+      in: query
+      schema:
+        type: integer
+        minimum: 0
   securitySchemes:
     galleryApiKey:
       type: apiKey

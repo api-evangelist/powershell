@@ -1,10 +1,7 @@
 {
   "provider": "powershell",
   "sources": [
-    "powershell-metadata-api-openapi.yml",
-    "powershell-packages-api-openapi.yml",
-    "powershell-search-api-openapi.yml",
-    "powershell-updates-api-openapi.yml"
+    "_original/powershell-openapi.yml"
   ],
   "outputs": [
     "powershell-metadata-api-openapi.yml",
@@ -16,11 +13,14 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "powershell-metadata-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "powershell-packages-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "powershell-search-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "powershell-updates-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "powershell-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "powershell-metadata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "powershell-packages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "powershell-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "powershell-updates-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

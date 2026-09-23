@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: PowerShell Gallery Metadata Updates API
+  title: PowerShell Gallery Updates API
   description: 'The PowerShell Gallery exposes a public OData v2 API for discovering, retrieving,
 
     and downloading PowerShell modules, scripts, and DSC resources. The service is
@@ -9,9 +9,7 @@ info:
 
     but can also be queried directly via HTTP. Publishing endpoints require a Gallery
 
-    API key passed in the X-NuGet-ApiKey header.
-
-    '
+    API key passed in the X-NuGet-ApiKey header.'
   version: '2.0'
   contact:
     name: PowerShell Gallery

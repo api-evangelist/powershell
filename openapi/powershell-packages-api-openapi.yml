@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: PowerShell Gallery Metadata Packages API
+  title: PowerShell Gallery Packages API
   description: 'The PowerShell Gallery exposes a public OData v2 API for discovering, retrieving,
 
     and downloading PowerShell modules, scripts, and DSC resources. The service is
@@ -9,9 +9,7 @@ info:
 
     but can also be queried directly via HTTP. Publishing endpoints require a Gallery
 
-    API key passed in the X-NuGet-ApiKey header.
-
-    '
+    API key passed in the X-NuGet-ApiKey header.'
   version: '2.0'
   contact:
     name: PowerShell Gallery
@@ -34,9 +32,7 @@ paths:
       summary: List packages
       description: 'Returns the V2FeedPackage entity set. Supports standard OData query options
 
-        such as $filter, $orderby, $top, $skip, $select, $expand.
-
-        '
+        such as $filter, $orderby, $top, $skip, $select, $expand.'
       operationId: listPackages
       parameters:
       - $ref: '#/components/parameters/Filter'
@@ -100,13 +96,8 @@ paths:
           description: Feed of package versions.
 components:
   parameters:
-    SemVerLevel:
-      name: semVerLevel
-      in: query
-      schema:
-        type: string
-    OrderBy:
-      name: $orderby
+    Select:
+      name: $select
       in: query
       schema:
         type: string
@@ -116,23 +107,28 @@ components:
       schema:
         type: integer
         minimum: 0
-    Top:
-      name: $top
+    OrderBy:
+      name: $orderby
       in: query
       schema:
-        type: integer
-        minimum: 0
+        type: string
     Filter:
       name: $filter
       in: query
       schema:
         type: string
       description: OData $filter expression.
-    Select:
-      name: $select
+    SemVerLevel:
+      name: semVerLevel
       in: query
       schema:
         type: string
+    Top:
+      name: $top
+      in: query
+      schema:
+        type: integer
+        minimum: 0
   securitySchemes:
     galleryApiKey:
       type: apiKey

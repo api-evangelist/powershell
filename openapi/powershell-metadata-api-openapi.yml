@@ -9,9 +9,7 @@ info:
 
     but can also be queried directly via HTTP. Publishing endpoints require a Gallery
 
-    API key passed in the X-NuGet-ApiKey header.
-
-    '
+    API key passed in the X-NuGet-ApiKey header.'
   version: '2.0'
   contact:
     name: PowerShell Gallery
