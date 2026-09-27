@@ -9,15 +9,21 @@ description: >-
   (WS-Management and SSH).
 type: Index
 deliveryModel:
-  model: unknown
-  open_source: false
+  model: self-hosted
+  license: MIT
+  license_evidence:
+    repo: powershell/powershell
+    spdx: MIT
+    stars: 55515
+  open_source: true
   commercial: false
   callable_host: true
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Self-hosted open source · you run it yourself
+  confidence: medium
   source:
   - openapi
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
