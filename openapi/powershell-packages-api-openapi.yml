@@ -96,12 +96,16 @@ paths:
           description: Feed of package versions.
 components:
   parameters:
-    Skip:
-      name: $skip
+    SemVerLevel:
+      name: semVerLevel
       in: query
       schema:
-        type: integer
-        minimum: 0
+        type: string
+    OrderBy:
+      name: $orderby
+      in: query
+      schema:
+        type: string
     Filter:
       name: $filter
       in: query
@@ -114,18 +118,14 @@ components:
       schema:
         type: integer
         minimum: 0
-    OrderBy:
-      name: $orderby
+    Skip:
+      name: $skip
       in: query
       schema:
-        type: string
+        type: integer
+        minimum: 0
     Select:
       name: $select
-      in: query
-      schema:
-        type: string
-    SemVerLevel:
-      name: semVerLevel
       in: query
       schema:
         type: string
