@@ -7,7 +7,7 @@ front_door_ai:
   probed_at: '2026-09-17'
   host: microsoft.com
   final_host: www.microsoft.com
-  ownership: inherited
+  ownership: unresolved
   owner: null
   shares_host_with:
   - microsoft-azure-advisor
@@ -17,9 +17,12 @@ front_door_ai:
   - microsoft-azure-site-recovery
   - microsoft-azure-sql-database
   - microsoft-azure-stream-analytics
-  inherited_from: www.microsoft.com
+  inherited_from: null
+  alias_of: www.microsoft.com
   verdict: scored
   score: null
+  band: null
+  band_label: null
   host_score: 36
   density: null
   words: 983
