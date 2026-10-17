@@ -67,17 +67,17 @@ paths:
             application/json: {}
 components:
   parameters:
-    OrderBy:
-      name: $orderby
-      in: query
-      schema:
-        type: string
     Skip:
       name: $skip
       in: query
       schema:
         type: integer
         minimum: 0
+    OrderBy:
+      name: $orderby
+      in: query
+      schema:
+        type: string
     Top:
       name: $top
       in: query

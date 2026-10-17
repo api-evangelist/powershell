@@ -96,23 +96,6 @@ paths:
           description: Feed of package versions.
 components:
   parameters:
-    Skip:
-      name: $skip
-      in: query
-      schema:
-        type: integer
-        minimum: 0
-    Top:
-      name: $top
-      in: query
-      schema:
-        type: integer
-        minimum: 0
-    OrderBy:
-      name: $orderby
-      in: query
-      schema:
-        type: string
     Select:
       name: $select
       in: query
@@ -124,6 +107,23 @@ components:
       schema:
         type: string
       description: OData $filter expression.
+    Skip:
+      name: $skip
+      in: query
+      schema:
+        type: integer
+        minimum: 0
+    OrderBy:
+      name: $orderby
+      in: query
+      schema:
+        type: string
+    Top:
+      name: $top
+      in: query
+      schema:
+        type: integer
+        minimum: 0
     SemVerLevel:
       name: semVerLevel
       in: query
