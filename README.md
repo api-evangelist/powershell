@@ -1,4 +1,4 @@
-# PowerShell (powershell)
+# PowerShell
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,109 +66,128 @@
 
 PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework. The PowerShell ecosystem exposes APIs through the PowerShell Gallery (an OData-based package repository), the Runspace .NET hosting APIs, and PowerShell Remoting protocols (WS-Management and SSH).
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/powershell/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/powershell/refs/heads/main/apis.yml)
+**Areas:** Automation · Command Line · Cross-Platform · Scripting · Shell · Windows · DevOps
 
-## Scope
+## PowerShell on APIs.io
 
-- **Type:** Index
+Everything profiled for PowerShell is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/powershell/](https://apis.io/providers/powershell/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- Automation
-- Command-Line
-- Cross-Platform
-- Scripting
-- Shell
-- Windows
-- DevOps
+- [PowerShell Gallery API](https://apis.io/apis/powershell/powershell-gallery-api/) — The PowerShell Gallery is the central repository for PowerShell modules, scripts, and DSC resources. It exposes a public OData v2 API for searching,…
+- [PowerShell Runspace API](https://apis.io/apis/powershell/powershell-runspace-api/) — .NET APIs for creating, configuring, and managing PowerShell runspaces from host applications. Enables embedding PowerShell execution inside .NET programs.
+- [PowerShell Remoting API](https://apis.io/apis/powershell/powershell-remoting-api/) — APIs and protocols for remote PowerShell execution over WS-Management (WinRM) and SSH. Enables one-to-one and one-to-many remote command and session management.
+- [PowerShell Metadata API](https://apis.io/apis/powershell/powershell-metadata-api/) — OData service metadata.
+- [PowerShell Packages API](https://apis.io/apis/powershell/powershell-packages-api/) — Browse and retrieve package entries from the Gallery feed.
+- [PowerShell Search API](https://apis.io/apis/powershell/powershell-search-api/) — Search and discovery operations.
+- [PowerShell Updates API](https://apis.io/apis/powershell/powershell-updates-api/) — Find updates for installed packages.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### PowerShell Gallery API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The PowerShell Gallery is the central repository for PowerShell modules, scripts, and DSC resources. It exposes a public OData v2 API for searching, retrieving, and downloading packages programmatically.
+- [Powershell Agentic Access](https://apis.io/agentic-access/powershell/powershell-agentic-access/)
 
-- **Human URL:** [https://www.powershellgallery.com/](https://www.powershellgallery.com/)
-- **Base URL:** `https://www.powershellgallery.com/api/v2`
+#### Collections (5)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Modules
-- NuGet
-- Packages
-- Repository
-- OData
+- [PowerShell Gallery API](https://apis.io/collections/powershell/open-powershell/)
+- [PowerShell Gallery Metadata API](https://apis.io/collections/powershell/open-powershell-metadata-api/)
+- [PowerShell Gallery Metadata Packages API](https://apis.io/collections/powershell/open-powershell-packages-api/)
+- [PowerShell Gallery Metadata Search API](https://apis.io/collections/powershell/open-powershell-search-api/)
+- [PowerShell Gallery Metadata Updates API](https://apis.io/collections/powershell/open-powershell-updates-api/)
 
-#### Properties
+#### Security (4)
 
-- [Documentation](https://docs.microsoft.com/en-us/powershell/gallery/overview)
-- [Metadata](https://www.powershellgallery.com/api/v2/$metadata)
-- [Postman Collection](collections/powershell.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/powershell.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### PowerShell Runspace API
+- [Powershell Authentication](https://apis.io/security/powershell/powershell-authentication/)
+- [Powershell Domain Security](https://apis.io/security/powershell/powershell-domain-security/)
+- [Powershell Trust Center](https://apis.io/security/powershell/powershell-trust-center/)
+- [Powershell Vulnerability Disclosure](https://apis.io/security/powershell/powershell-vulnerability-disclosure/)
 
-.NET APIs for creating, configuring, and managing PowerShell runspaces from host applications. Enables embedding PowerShell execution inside .NET programs.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.runspaces](https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.runspaces)
+Published plans, tiers and prices.
 
-#### Tags
+- [Powershell Plans Pricing](https://apis.io/plans/powershell/powershell-plans-pricing/)
 
-- Automation
-- .NET
-- Runspace
-- SDK
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://docs.microsoft.com/en-us/powershell/scripting/developer/hosting/creating-runspaces)
-- [SDK](https://www.nuget.org/packages/System.Management.Automation/)
-- [Examples](https://github.com/PowerShell/PowerShell/tree/master/test/hosting)
-- [Postman Collection](collections/powershell.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/powershell.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Powershell Rate Limits](https://apis.io/rate-limits/powershell/powershell-rate-limits/)
 
-### PowerShell Remoting API
+#### FinOps (1)
 
-APIs and protocols for remote PowerShell execution over WS-Management (WinRM) and SSH. Enables one-to-one and one-to-many remote command and session management.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/running-remote-commands](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/running-remote-commands)
+- [Powershell Finops](https://apis.io/finops/powershell/powershell-finops/)
 
-#### Tags
+## Where to find this API
 
-- Remoting
-- SSH
-- WinRM
-- WS-Management
-
-#### Properties
-
-- [Documentation](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/powershell-remoting-faq)
-- [Protocol Specification](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-psrp/)
-- [Postman Collection](collections/powershell.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/powershell.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://microsoft.com/powershell)
-- [Git Hub](https://github.com/PowerShell/PowerShell)
 - [Documentation](https://docs.microsoft.com/en-us/powershell/)
+- [Getting started](https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started)
 - [Blog](https://devblogs.microsoft.com/powershell/)
-- [Community](https://github.com/PowerShell/PowerShell/blob/master/docs/community/README.md)
-- [Getting Started](https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started)
-- [License](https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt)
-- [Releases](https://github.com/PowerShell/PowerShell/releases)
-- [Roadmap](https://github.com/PowerShell/PowerShell/projects)
 - [Security](https://github.com/PowerShell/PowerShell/security/policy)
-- [Contributing](https://github.com/PowerShell/PowerShell/blob/master/.github/CONTRIBUTING.md)
-- [Integrations](https://www.microsoft.com/en-us/marketplace)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Microsoft
-**Email:** powershell@microsoft.com
-**URL:** https://github.com/PowerShell
+**Kin Score 37.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 50.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 15.8 |
+
+**Agent readiness 22.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/powershell/](https://apis.io/providers/powershell/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PowerShell: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/powershell/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
